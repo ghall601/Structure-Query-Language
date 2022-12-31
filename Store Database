@@ -1,0 +1,19 @@
+create table store (brand text, size text, color text, quanitity integer, rating integer);
+
+insert into store (brand) values ("polo");
+insert into store (brand) values ("hanes");
+insert into store (brand) values ("tom ford");
+insert into store (brand) values ("nike");
+insert into store (brand) values ("hallway");
+
+insert into store (size) values ("L");
+insert into store (size) values ("L");
+insert into store (size) values ("L");
+insert into store (size) values ("L");
+insert into store (size) values ("L");
+
+insert into store (color) values ("red");
+insert into store (color) values ("blue");
+insert into store (color) values ("black");
+SELECT * FROM store where brand order by not null
+
