@@ -1,0 +1,25 @@
+/* Create table about the people and what they do here */
+CREATE TABLE Famous_People(id INTEGER PRIMARY KEY, fullname TEXT, age INTEGER, hobbie TEXT);
+INSERT INTO Famous_People VALUES (1, "Georgio Hall", 35, 'football');
+INSERT INTO Famous_People VALUES (2, "D'Asia Hall", 30, 'designer');
+INSERT INTO Famous_People VALUES (3, "Karman Hall", 7, 'artist');
+INSERT INTO Famous_People VALUES (4, "Kamree Hall", 5, 'actress');
+INSERT INTO Famous_People VALUES (5, "Khloe Hall", 2, 'viewer');
+INSERT INTO Famous_People VALUES (6, "Kaleb Hall", 1, 'eater');
+
+CREATE TABLE People_State(id INTEGER PRIMARY KEY, state TEXT, zipcode INTEGER);
+INSERT INTO People_State VALUES (1, "Mississippi", 601);
+INSERT INTO People_State VALUES (2, "Texas", 214);
+INSERT INTO People_State VALUES (3, "Arkansas", 870);
+INSERT INTO People_State VALUES (4, "Arkansas", 870);
+INSERT INTO People_State VALUES (5, "Arkansas", 870);
+INSERT INTO People_State VALUES (6, "Arkansas", 870);
+
+CREATE TABLE People_Info(id INTEGER PRIMARY KEY, state TEXT, years_experience INTEGER);
+INSERT INTO People_Info VALUES (1, "Mississippi", 5);
+INSERT INTO People_Info VALUES (2, "Texas", 4);
+INSERT INTO People_Info VALUES (3, "Arkansas", 3);
+INSERT INTO People_Info VALUES (4, "Arkansas", 2);
+INSERT INTO People_Info VALUES (5, "Arkansas", 1);
+
+SELECT Famous_People. fullname, hobbie FROM Famous_People JOIN People_Info ON Famous_People. id = People_Info. state
